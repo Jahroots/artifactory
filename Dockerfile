@@ -1,7 +1,7 @@
-FROM jahroots/java
+FROM jeanblanchard/busybox-java
 MAINTAINER Jahroots "Jahroots@gmail.com"
 
-RUN apt-get update && apt-get install -y unzip
+RUN opkg-install unzip
 RUN curl -OL http://dl.bintray.com/jfrog/artifactory/artifactory-3.4.0.zip
 RUN unzip artifactory-3.4.0.zip
 RUN rm artifactory-3.4.0.zip
